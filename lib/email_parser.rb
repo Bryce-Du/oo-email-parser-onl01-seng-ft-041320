@@ -15,7 +15,10 @@ class EmailAddressParser
     email_array.map do |email|
       email.split(",").join
     end
-    email_array.
+    single_emails = []
+    email_array.each do |email|
+      single_emails << email unless single_emails.include?(email)
+    end
   end
   
 end
