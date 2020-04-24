@@ -12,11 +12,12 @@ class EmailAddressParser
   
   def parse
     email_array = @emails.split(" ")
-    email_array.map do |email|
+   parsed_emails = email_array.map do |email|
       email.split(",").join
     end
+    
     single_emails = []
-    email_array.each do |email|
+    parsed_emails.each do |email|
       single_emails << email unless single_emails.include?(email)
     end
     single_emails
