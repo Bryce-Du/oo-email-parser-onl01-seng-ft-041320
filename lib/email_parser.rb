@@ -15,6 +15,7 @@ class EmailAddressParser
     email_array.map do |email|
       email.split(",").join
     end
+    email_array.
   end
   
 end
