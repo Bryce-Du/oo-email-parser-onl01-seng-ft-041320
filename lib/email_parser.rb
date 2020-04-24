@@ -11,7 +11,11 @@ class EmailAddressParser
   end
   
   def parse
-    @emails.split(", ")
+    email_array = @emails.split(", ")
+    if email_array.length == 1  # there's only one email, or they arent csv
+      email_array = @emails.split(" ")
+    end
+    email_array
   end
   
 end
